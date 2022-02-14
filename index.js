@@ -1,5 +1,4 @@
-
-import navSection from './modules/navbar.js';
+import navSection from './modules/navigationbar.js';
 import BookCollection from './modules/class.js';
 
 navSection('list-nav');
