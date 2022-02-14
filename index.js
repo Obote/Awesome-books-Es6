@@ -1,4 +1,17 @@
 
+import navSection from './modules/navbar.js';
+import BookCollection from './modules/class.js';
+
+navSection('list-nav');
+const navList = ['list-nav', 'add-nav', 'contact-nav'];
+navList.forEach((element) => {
+  const display = document.getElementById(`${element}`);
+  display.addEventListener('click', () => {
+    navSection(element);
+  });
+});
+
+const btnAdd = document.getElementById('btn-add-id');
 const runClass = new BookCollection();
 runClass.displayBooks();
 
@@ -6,24 +19,3 @@ btnAdd.addEventListener('click', () => {
   runClass.addBooks();
   runClass.displayBooks();
 });
-
-function navSection(navItem) {
-  const booklist = document.getElementById('books');
-  const addBook = document.getElementById('add-books');
-  const contact = document.getElementById('contact');
-
-  if (navItem === 'booklist') {
-    booklist.style.display = 'block';
-    addBook.style.display = 'none';
-    contact.style.display = 'none';
-  } else if (navItem === 'addBook') {
-    booklist.style.display = 'none';
-    addBook.style.display = 'block';
-    contact.style.display = 'none';
-  } else {
-    booklist.style.display = 'none';
-    addBook.style.display = 'none';
-    contact.style.display = 'flex';
-  }
-}
-navSection('booklist');
