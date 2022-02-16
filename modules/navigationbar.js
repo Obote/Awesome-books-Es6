@@ -1,4 +1,5 @@
-export default function navSection(navItem) {
+let navSection;
+export default navSection = (navItem) => {
   const booklist = document.getElementById('books');
   const addBook = document.getElementById('add-books');
   const contact = document.getElementById('contact');
@@ -16,4 +17,6 @@ export default function navSection(navItem) {
     addBook.style.display = 'none';
     contact.style.display = 'flex';
   }
-}
+};
+
+navSection();

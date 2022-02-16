@@ -25,6 +25,7 @@ const dateTime = () => {
   const dateFormat = `${luxonDate.monthLong} ${luxonDate.day}th ${luxonDate.year}, ${luxonDate.hour}:${luxonDate.minute}:${luxonDate.second} `;
   document.getElementById('timeDiv').innerHTML = `${dateFormat}`;
 };
+
 dateTime();
 window.onload = function onload() {
   setInterval(dateTime, 100);
